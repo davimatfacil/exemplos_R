@@ -1,0 +1,37 @@
+---
+title: <font size="6">"Tip_trick 1 - Contando o número de combinações no R"</font> 
+author: "Prof.Davi Rocha"
+
+output: html_document
+---
+ 
+
+Um problema comum no calculo de probabilidades de variáveis discretas é contar combinações, ou seja,
+o número de subconjuntos distintos de tamanho k que podem ser criados a partir de n itens.
+
+Esse número pode ser calculado pela fórmula $$ C_n,_k = \frac{n!}{k!(n - k) !} $$  , mas é muito mais fácil fazer isso no R usando a função ***choose(n, k)***.
+
+Por exemplo, considere um conjunto com seis elementos que serão tomados dois a dois. 
+Observe que  aqui n = 6 e k = 2 logo no R:
+
+```{r}
+choose(6,2)
+
+```
+
+O Resultado é 15, ou seja, logo é possivel 15 combinações de 2 números nesses 6.
+
+
+Só a titulo de mais um exemplo, uma interessante aplicação de combinação é nas loterias, megassena, quina entre outras. A megassena consiste em uma cartela de 60 números dentre os quais devemos acertar 6 (prêmio principal), portanto temos uma combinação onde n = 60 e k = 6, sessenta números tomados seis a seis.
+Quantas combinações temos de 6 números nestes 60?
+Aplicando o R:
+
+
+```{r}
+choose(60,6)
+
+```
+
+Era isso!
+Até a próxima dica!
+
